@@ -1,0 +1,388 @@
+/*  click & scroll*/
+		/** {
+			-webkit-user-select: none;
+			-moz-user-select: moz-none;
+			-ms-user-select: none;
+			user-select: none;
+		}*/
+		/* \click & scroll*/
+
+		html, body { height: 100%; margin: 0; background: #FFFFFF;}
+
+		p{ margin: 0px auto 0px; padding: 0px; }
+    a{ cursor: pointer; }
+
+		.bold{ font-weight: bold; }
+		.italic{font-style: italic;}
+		.justify{ text-align: justify; }
+    .unbold{font-weight: normal;}
+
+    .uppercase{
+      text-transform: uppercase;
+    }
+
+		.div_center{
+			display: block; /*iki ngaruh nang TABEL FORM kah??*/
+			margin:0px auto;
+		}
+
+		.text_center{
+			text-align: center;
+		}
+
+    .clear-left{
+      clear:left;
+    }
+
+		.border{
+			/*outline: 1px solid orange;*/
+			border-style: solid;
+			border-width: 1px;
+		}
+
+		.hr_potong_kertas{
+			border-width: 1px;
+			border-color: #666;
+			border-style: dashed;
+
+		}
+
+		.font_cetak{
+			font-size: 8pt;
+		}
+
+		/*.container{
+			font-weight: bold;
+			height: 100vh;
+			width: 800px;
+			//background:#eaeaea;
+			margin:0px auto;
+		}*/
+
+		/*table[name=sep1] tr,
+		table[name=sep2] tr{
+			height: 20px;
+		}
+*/
+		table[name=sep1] tr td:nth-child(1),
+		table[name=sep2] tr td:nth-child(1){
+			width:120px;
+		}
+
+		table[name=sep1] tr td:nth-child(2),
+		table[name=sep2] tr td:nth-child(2){
+			width:250px;
+		}
+
+		.ft_normal{
+			font-weight: normal;
+		}
+
+		.ft_title{
+			font-weight: bold;
+			font-size: 12pt;
+		}
+
+		.ft_size_note{
+			font-size: 8pt;
+		}
+
+		.ft_size_ttd, .ft_10pt{
+      font-size: 10pt;
+    }
+
+    .ft_12pt{
+			font-size: 12pt;
+		}
+
+		.bpjs_logo{
+			width:210px;
+		}
+
+
+		
+
+    .kertas_A4{
+			width:750px;
+			margin:0px auto;
+    }
+    
+		#kertas_resume table,
+		#kertas_resume div{
+			width:750px;
+			margin:0px auto;
+		}
+    
+		#kertas_resume table[name=part_3] tr{
+			height: 60px;
+			vertical-align: top;
+		}
+
+		#kertas_resume table[name=part_4] tr{
+			vertical-align: top;
+		}
+
+    .sep_width_td1 tr td:nth-child(1){
+      width: 107px;
+    }
+
+
+
+
+    /*  =============== header.php =================  */
+    
+  .div_center{
+    margin:0px auto;
+  }
+
+  
+  .mytable.table-bordered>tbody>tr>td, .mytable.table-bordered>tbody>tr>th, 
+  .mytable.table-bordered>tfoot>tr>td, .mytable.table-bordered>tfoot>tr>th, 
+  .mytable.table-bordered>thead>tr>td, .mytable.table-bordered>thead>tr>th {
+    border: 1px solid #707070;
+  }
+
+
+  
+
+
+  div[name=main] input , 
+  table[name=tblDataRm] td:nth-child(1),
+  table[name=tblDataRm] td:nth-child(2),
+  table[name=tbl_bpjs] td:nth-child(1),
+  table[name=tbl_bpjs] td:nth-child(2) {
+    font-size: 12pt;
+  }
+  
+  input[name=pasienRscm_norm]{
+    width:180px;
+    margin:0px 10px 10px;
+
+  }
+
+  table[name=tblDataRm] td:nth-child(1),
+  table[name=tbl_bpjs] td:nth-child(1),
+  table[name=tblDataRm] td:nth-child(2),
+  table[name=tbl_bpjs] td:nth-child(2){
+    padding: 0px 10px;
+  }
+
+  table[name=tblDataRm] td:nth-child(1),
+  table[name=tbl_bpjs] td:nth-child(1){
+    text-align: right;
+  }
+
+  table[name=tblDataRm] td:nth-child(2){
+    width:300px;
+  }
+
+  table[name=tbl_bpjs] td:nth-child(2){
+    width:220px;
+  }
+  
+  input[name=pasienRscm_norm]{
+    margin:0px;
+  }
+
+  input[name=klinikTujuan], input[name=cari_jadok]{
+    width:300px;
+    //margin:5px 0px 45px;
+    //margin:5px 0px 5px;
+    
+  }
+
+
+    /* ================= [LOAD: MODAL>>KLINIK] ====================== */
+  .container_poli{
+    margin: 0px auto 0px;
+    width:100%;
+    padding:0px;
+    //border:solid 1px black;
+    overflow: auto;
+    //text-align: center;
+
+    display:grid;
+    //grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+    grid-template-columns:repeat(auto-fill,minmax(130px,1fr));
+    justify-items: center;
+    grid-gap: 5px;
+    grid-row-gap: 0px;
+
+  }
+  .obyek{
+    //height:150px;
+    //overflow: auto;
+    width:130px;
+    ///width:100%;
+    background:yellow;
+    float: left;
+    margin:5px;
+    //border:solid 1px black;
+    border-radius: 5px;
+
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    //transition: all .15s linear;
+    z-index:0;
+
+  }
+  .obyek:hover{
+    background: lightblue;
+  }
+
+  .obyek img{
+    display: block;
+    height: 100px;
+    margin:10px auto 5px;
+  }
+
+  .obyek_title{
+    height: 60px;
+    /*margin:0px auto 0;*/
+    margin:0px;
+    color: #191919;
+    font-weight: bold;
+    font-size: 10pt;
+  }
+  .obyek_title span{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    color:#047BB9;
+    width:100%;
+
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+  
+  .polaroid-images a:after {
+    color: #333;
+    //font-size: 20px;
+    font-size: 11pt;
+    font-weight:bold;
+    content: attr(title);
+    position: relative;
+    top:5px;
+  }
+
+  .polaroid-images img { 
+    display: block; 
+    //width: inherit; 
+    height: 100px; 
+  }
+  .polaroid-images a{
+    background: white;
+    display: inline;
+    float: left;
+    margin: 0 15px 30px;
+    padding: 5px 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    transition: all .15s linear;
+    z-index:0;
+      position:relative;
+
+  }
+  
+/*
+  .modal-lg{
+    width:1000px;
+    margin:auto;
+  }
+*/
+
+    /* =================\[LOAD: MODAL>>KLINIK] ====================== */
+    /*  ===============\header.php =================  */
+
+    /*  =============== view/daftarmandiri/admin.php =================  */
+    .site-bg{
+      /*background-image: url('../img/rscm/RS Citra Medika-coloring2-light.jpg');*/
+      background-repeat:no-repeat;
+      //opacity: 0.3;
+      //filter: alpha(opacity=30); // For IE8 and earlier 
+      background: transparent\9;
+      background-size: cover; 
+      background-position:center;
+    }
+
+    /*body{
+      background: #D8F6EF;
+    }*/
+
+
+
+
+
+
+
+    /*  ===============\view/daftarmandiri/admin.php =================  */
+
+
+
+
+    /*  =============== TAB di Daftarmandiri/admin.php =================  */
+    /*
+  .container{
+    margin:50px;
+  }
+
+  @media(min-width:768px){
+    .panel-heading{
+      display:none;
+    }  
+    .panel{
+      border:none;
+      box-shadow:none;
+    }
+    .panel-collapse{
+      height:auto;
+      &.collapse{
+        display:block;
+      }
+    }
+  }
+
+  @media(max-width:767px){
+    .tab-content{
+      .tab-pane{
+         display:block;
+      }    
+    }
+     .nav-tabs{
+        display:none;
+    }
+    .panel-title a{
+      display:block;
+    }
+    .panel{
+      margin:0;
+      box-shadow:none;
+      border-radius:0;
+       margin-top:-2px;
+    }
+    .tab-pane{
+       &:first-child{
+        .panel{
+          border-radius:5px 5px 0 0;
+        }
+      }
+      &:last-child{
+        .panel{
+          border-radius:0 0 5px 5px;
+        }
+      }  
+    }
+  }
+  */
+    /*  ===============  \TAB di Daftarmandiri/admin.php ===============  */
+
+

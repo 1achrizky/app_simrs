@@ -1,0 +1,74 @@
+[ CATATAN CODING RIZ]
+
+1# Instruksi Koding Setelah Print Page
+
+<script>
+		window.print();
+
+		window.onafterprint = function(){
+		  alert("Printing completed...");
+		  window.location = "<?=base_url();?>vclaim/tes_cetak";
+		};
+
+
+		/* note try */
+		// function loadPrint() {
+		//     window.print();
+		//     setTimeout(function () { window.close(); }, 100);
+		// }
+		// loadPrint();
+
+		// function print_window(){
+		//   window.print();
+		//   setTimeout(function () { 
+		//     window.open('', '_self', '');
+		//     window.close();
+		//   }, 100);
+		// }
+		// print_window();
+		/*/note try */
+</script>
+
+
+
+2# MENCARI BILLING TERBARU
+<SQL>
+	select NoBill from fotrdaftar where TanggalMasuk=CURDATE() ORDER BY NoBill DESC limit 1
+</SQL> 
+result: BL180716.0091
+
+**********
+<SQL>
+	select RIGHT((select NoBill from fotrdaftar where TanggalMasuk=CURDATE() ORDER BY NoBill DESC limit 1) , 4)
+</SQL> 
+result (4 digit terakhir): 0091 
+
+
+
+**********
+<SQL>
+	select RIGHT((select NoBill from fotrdaftar where TanggalMasuk=CURDATE() ORDER BY NoBill DESC limit 1) , 4)
+</SQL> 
+result (4 digit terakhir): 0091 
+ ---------------
+<SQL>
+	(	select RIGHT(
+	  (
+		  select NoBill from fotrdaftar where TanggalMasuk=CURDATE()
+			ORDER BY NoBill DESC limit 1
+	  ) , 4)
+	)
+</SQL> 
+result (4 digit terakhir): 0091 
+
+
+XXX
+select CAST(
+  RIGHT(
+	  (select NoBill from fotrdaftar where TanggalMasuk=CURDATE() ORDER BY NoBill DESC limit 1) , 4
+  )
+)
+
+XXX
+select CONVERT(INT,'0017')
+

@@ -1,0 +1,22 @@
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php/$1 [L]
+
+
+#===[ UPLOAD WEBSITE ]===
+#DirectoryIndex index.php
+
+#tambahan error .../index.php?/...
+#DirectoryIndex index.php
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?/$1 [QSA,L] # INI YANG DIPAKAI
+#RewriteRule ^(.*)$ index.php/$1 [QSA,L]
+
+#RewriteCond %{HTTPS} off #DIPAKAI KALAU HTTPS
+#RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]    #DIPAKAI KALAU HTTPS
+#RewriteRule ^.*$ http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
